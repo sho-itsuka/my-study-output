@@ -84,7 +84,16 @@ Observable
 Observable
   .pipe(
     debounceTime(250),
-    maap(value => `debounceTime(250): ${value}`)
+    map(value => `debounceTime(250): ${value}`)
   )
 ```
-</br>
+
+- skip()</br>
+指定した回数分だけストリームを流さずにスキップする。
+```
+Observable
+  .pipe(
+    skip(3),  // 3回スキップされた後、4回目でデータが流れる。
+    map(value => `skip: ${value}`)
+  )
+```
