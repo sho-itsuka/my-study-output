@@ -97,3 +97,13 @@ Observable
     map(value => `skip: ${value}`)
   )
 ```
+
+- take()</br>
+指定した回数分だけ実行(それ以降、ストリームにデータが流れない)
+```
+Observable
+  .pipe(
+    take(3),  // 3回実行され、4回目以降はデータが流れない。
+    map(value => `take({++ count}): ${value}`)
+  )
+```
