@@ -107,3 +107,18 @@ Observable
     map(value => `take({++ count}): ${value}`)
   )
 ```
+
+- finalize()</br>
+引数で渡したコールバック関数を、ストリームが流れた最後に行う。
+ストリームが流れた最後に何か処理を行いたいときに利用。
+(ex) HttpClientリクエストを行う際、画面にローディングアイコンを表示→完了したら非表示にする等
+```
+interval(1000)
+  .pipe(
+    map(index => `finalize(map): ${index + 1}`),
+    take(3),
+    finalize(() => {
+      setTimeout(() => this.add({ message: 'finalize!' }), 100)
+    })
+  )
+```
