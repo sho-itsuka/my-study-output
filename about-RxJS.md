@@ -122,3 +122,10 @@ interval(1000)
     })
   )
 ```
+
+### ◎ Subject
+Observableの機能を持つ。
+- Observableを継承しているクラス ← pipeやsubscribeなどを使える。
+- 任意のタイミングでデータを渡せる
+- 実装では、Observable単体より、Subjectを用いることが多い
+- Subjectでは、登録されるOvserver(Subscribeする際のコールバックを含むオブジェクトのこと)を全て保持する
