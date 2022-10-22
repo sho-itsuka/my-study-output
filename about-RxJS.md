@@ -129,3 +129,6 @@ Observableの機能を持つ。
 - 任意のタイミングでデータを渡せる
 - 実装では、Observable単体より、Subjectを用いることが多い
 - Subjectでは、登録されるOvserver(Subscribeする際のコールバックを含むオブジェクトのこと)を全て保持する
+</br>
+【一般的な使い方】</br>
+
